@@ -10,10 +10,16 @@
   </head>
 
   <body>
+    <a href="/profile/">My Profile</a>
+    <a href="/">Home</a>
     <h1>Edit Post</h1>
 
-    <form name="editPost">
-      <button>Edit Post</button>
+    <form id="editPostForm">
+      <input type="text" id="postTitle" placeholder="Title" required />
+      <textarea id="postBody" placeholder="Body" required></textarea>
+      <input type="text" id="postTags" placeholder="Tags (comma-separated)" />
+      <input type="url" id="media-url" name="media-url" />
+      <button id="editPostForm" type="submit">Save Changes</button>
     </form>
   </body>
 </html>
