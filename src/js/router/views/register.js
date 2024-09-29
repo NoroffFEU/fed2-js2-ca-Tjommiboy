@@ -1,5 +1,14 @@
 import { onRegister } from "../../ui/auth/register";
 
-const form = document.forms.register;
+console.log("register.js is loaded");
 
-form.addEventListener("submit", onRegister);
+const form = document.querySelector("#registerForm");
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log("Form submit event detected");
+    onRegister(event);
+  });
+} else {
+  console.error("Form not found");
+}
